@@ -225,6 +225,19 @@ while login == False:
             else:
                 print("Nomor Rekening Tidak Ditemukan")
             kembali(ulang)
+	
+	elif pilihan == 5 :
+            print("")
+            print("DAFTAR PEMBAYARAN E-WALLET")
+            print("1. Dana\n2. Shopeepay\n3. Gopay")
+            pilih=int(input("Masukkan pilihan Anda : "))
+            print("")
+            for i in range (1,4):
+                if pilih == i:
+                    print("Jenis E-wallet : ", ewallet[i])
+                    print('1. Top Up\n2. Pembayaran')
+                    t1 = int(input("Masukkan Pilihan Anda : "))
+                    if t1 == 1:
 
         else : 
             print("\n ======== SILAHKAN AMBIL KARTU ANDA ======== ")
