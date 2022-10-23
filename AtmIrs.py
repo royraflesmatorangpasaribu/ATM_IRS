@@ -105,20 +105,18 @@ def kembali(ulang):
         exit()
 
 while login == False:
-    splash()
-     
+    splash()   
     for i in range (3):
-        username = input("Username Anda : ")
         pin = input("Masukkan Pin ATM : ")
         cp = cekpin(pin)
         if cp != False:
             print("")
             print("NOTIFIKASI !!!")
             print("Pin Anda Benar")
-            print("Username Anda : ", username.upper())
             id_user = cp['id']
             login = True
             ulang = "Y"
+            time.sleep(2)
             break
         else:
             print("PIN ANDA SALAH, COBA LAGI!")
@@ -133,7 +131,6 @@ while login == False:
     ulang = "Y"
     while ulang == "Y" and login == True:
         us = user[cek_user(id_user)]
-        os.system('cls')
         print("")
         splash()
         print("================================================")
@@ -143,11 +140,12 @@ while login == False:
         print("| 2. Setor Tunai\t\t\t\t|")
         print("| 3. Tarik Tunai\t\t\t\t|")
         print("| 4. Transfer\t\t\t\t\t|")
-        print("| 5. Keluar\t\t\t\t\t|")
+        print("| 5. E-wallet\t\t\t\t\t|")
+        print("| 6. Keluar\t\t\t\t\t|")
         print("================================================")
         try:
             pilihan = int(input("Masukkan Pilihan Anda : "))
-            if pilihan < 0 or pilihan > 5:
+            if pilihan < 0 or pilihan > 6:
                 raise ValueError 
         except ValueError():
             print("Menu Yang Anda Pilih Tidak Tersedia")
