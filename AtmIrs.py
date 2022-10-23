@@ -97,7 +97,7 @@ def transfer(nominal, norek):
 
 def kembali(ulang):
     ulang = input("Apakah Anda Ingin Transaksi Lagi?(Y/T)")
-    if ulang == "T":
+    if ulang == "T" or ulang == "t"::
         print("\n\t ======== SILAHKAN AMBIL KARTU ANDA ======== ")
         print("")
         print("\n\t ---Terima Kasih Telah Menggunakan ATM IRS---")
