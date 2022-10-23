@@ -241,6 +241,20 @@ while login == False:
 			no=input("Masukkan Nomor Hp : ")
                         for i in range(1,len(nohp)+1) :
                             if no == nohp[i][0] :
+				print("Nama Akun : ", nohp[i][1])
+                    elif t1==2:
+                        kode=input("Masukkan Kode Pembayaran : ")
+                        print("Kode Pembayaran : ", kode.upper())
+                    else :
+                        print("Pilihan Anda Tidak Sesuai")
+                        break
+                    harga=int(input("Masukkan Nominal Pembayaran : Rp "))
+                    subtotal=harga+admin[i-1]
+                    print("Total Pembayaran : Rp ",subtotal)
+                    us['saldo'] = us['saldo'] - subtotal
+                    print("Sisa Saldo : Rp ",us['saldo'])
+
+            kembali(ulang)
 
         else : 
             print("\n ======== SILAHKAN AMBIL KARTU ANDA ======== ")
