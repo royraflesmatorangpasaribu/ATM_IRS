@@ -1,8 +1,6 @@
-from sys import exit
 import datetime
 import time
 import random
-import os
 
 user = {
          "id" : "1037", 
