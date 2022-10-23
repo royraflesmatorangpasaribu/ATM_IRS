@@ -3,24 +3,24 @@ import time
 import random
 
 user = {
-         "id" : "1037", 
-		 "nama" : "Ikhsan Saputra",
-         "pin" : "250803",
-         "norek" : "2117051037",
-         "saldo" : 500000
-         },{
-         "id" : "1058",
-         "nama" : "Roy Rafles",
-         "pin" : "050503",
-         "norek" : "2117051058",
-         "saldo" : 1000000
-         },{
-         "id" : "1068",
-         "nama" : "Siti Ayuni",
-         "pin" : "251002",
-         "norek" : "2117051068",
-         "saldo" : 1500000      
-		 }
+        "id" : "1037", 
+	"nama" : "Ikhsan Saputra",
+        "pin" : "250803",
+        "norek" : "2117051037",
+        "saldo" : 500000
+        },{
+        "id" : "1058",
+        "nama" : "Roy Rafles",
+        "pin" : "050503",
+        "norek" : "2117051058",
+        "saldo" : 1000000
+        },{
+        "id" : "1068",
+        "nama" : "Siti Ayuni",
+        "pin" : "251002",
+        "norek" : "2117051068",
+        "saldo" : 1500000      
+	}
     	
 
 
