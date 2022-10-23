@@ -22,8 +22,9 @@ user = {
         "saldo" : 1500000      
 	}
     	
-
-
+ewallet = {1 : 'Dana', 2 : 'Shopeepay', 3 : 'Gopay'}
+nohp ={1:['081234567890','Ayuni'],2: ['085678901234', 'Roy Rafles'], 3:['087890123456','Ikhsan']}
+admin = [0,2500,2000]
 login = False
 id_user = 0
 waktu = 0
