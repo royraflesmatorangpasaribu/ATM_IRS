@@ -238,6 +238,9 @@ while login == False:
                     print('1. Top Up\n2. Pembayaran')
                     t1 = int(input("Masukkan Pilihan Anda : "))
                     if t1 == 1:
+			no=input("Masukkan Nomor Hp : ")
+                        for i in range(1,len(nohp)+1) :
+                            if no == nohp[i][0] :
 
         else : 
             print("\n ======== SILAHKAN AMBIL KARTU ANDA ======== ")
