@@ -1,10 +1,10 @@
-import datetime
-import time
-import random
+import datetime #tanggal
+import time #waktu
+import random #untuk random angka
 
 user = {
         "id" : "1037", 
-	"nama" : "Ikhsan Saputra",
+		"nama" : "Ikhsan Saputra",
         "pin" : "250803",
         "norek" : "2117051037",
         "saldo" : 500000
@@ -20,7 +20,7 @@ user = {
         "pin" : "251002",
         "norek" : "2117051068",
         "saldo" : 1500000      
-	}
+		}
     	
 ewallet = {1 : 'Dana', 2 : 'Shopeepay', 3 : 'Gopay'}
 nohp ={1:['081234567890','Ayuni'],2: ['085678901234', 'Roy Rafles'], 3:['087890123456','Ikhsan']}
@@ -56,6 +56,7 @@ def cek_norek(cno):
     for i in range(len(user)):
         if str(user[i]['norek']) == str(cno):
             return int(i)
+        
     return -1
 
 def transfer(nominal, norek):
@@ -80,7 +81,7 @@ def transfer(nominal, norek):
             print("|No.Record : ", random.randint(10000, 1000000), "\t\t\t\t|")
             print("|\t\t\t\t\t\t|")
             print("|Nama Pengirim    : ", user[inisial1]['nama'], "\t\t|")
-            print("|Norek. Pengirim  : ", user[inisial2]['norek'], "\t\t|")
+            print("|Norek. Pengirim  : ", user[inisial1]['norek'], "\t\t|")
             print("|Nama Penerima    : ", user[inisial2]['nama'],"\t\t|")
             print("|Norek. Penerima  : ", user[inisial2]['norek'],"\t\t|") 
             print("|Jumlah		  : Rp.", nominal,"\t\t\t|")
@@ -147,8 +148,9 @@ while login == False:
             pilihan = int(input("Masukkan Pilihan Anda : "))
             if pilihan < 0 or pilihan > 6:
                 raise ValueError 
-        except ValueError():
+        except ValueError:
             print("Menu Yang Anda Pilih Tidak Tersedia")
+            
 
         if pilihan == 1:
             print("Saldo Anda Sebesar    : Rp ", us['saldo'])
@@ -217,14 +219,17 @@ while login == False:
             print("Saldo Anda Sebesar\t\t : Rp ", us['saldo'])
             rektf=input("Masukkan Nomor Rekening Tujuan   : ")
             cekno = cek_norek(rektf)
-            if cekno >= 0:
+            inisial1 = cek_user(id_user)
+            if rektf == user[inisial1]['norek'] :
+                print("nomor invalid")
+            elif cek_norek(rektf) >= 0:
                 jumlah=int(input("Masukkan Jumlah Nominal Transfer : Rp "))
                 transfer(jumlah,rektf)
             else:
                 print("Nomor Rekening Tidak Ditemukan")
             kembali(ulang)
-	
-	elif pilihan == 5 :
+
+        elif pilihan == 5 :
             print("")
             print("DAFTAR PEMBAYARAN E-WALLET")
             print("1. Dana\n2. Shopeepay\n3. Gopay")
@@ -254,9 +259,9 @@ while login == False:
 
             kembali(ulang)
 
-        else : 
-            print("\n ======== SILAHKAN AMBIL KARTU ANDA ======== ")
-            print("")
-            print("\n ---Terima Kasih Telah Menggunakan ATM IRS---")
-            print('=================================================')
-            exit()
+    else : 
+        print("\n ======== SILAHKAN AMBIL KARTU ANDA ======== ")
+        print("")
+        print("\n ---Terima Kasih Telah Menggunakan ATM IRS---")
+        print('=================================================')
+        exit()
