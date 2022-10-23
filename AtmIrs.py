@@ -259,7 +259,7 @@ while login == False:
 
             kembali(ulang)
 
-    else : 
+     elif pilihan == 6 : 
         print("\n ======== SILAHKAN AMBIL KARTU ANDA ======== ")
         print("")
         print("\n ---Terima Kasih Telah Menggunakan ATM IRS---")
