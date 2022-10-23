@@ -2,7 +2,7 @@ from sys import exit
 import datetime
 import time
 import random
-impoprt os
+import os
 
 user = {
          "id" : "1037", 
@@ -31,6 +31,15 @@ id_user = 0
 waktu = 0
 waktu = datetime.datetime.now()
 
+def splash():
+    print("")
+    print("================================================")
+    print("|	    --	      ATM IRS      --          |")
+    print("================================================")
+    print("")
+    print("----    Selamat Datang di IRS BANK    ----  ")
+    print("\tTransaksi Menjadi Lebih Mudah\t")
+    print("================================================")
 
 def cekpin(cpin):
     for usr in user:
@@ -75,8 +84,8 @@ def transfer(nominal, norek):
             print("|Norek. Pengirim  : ", user[inisial2]['norek'], "\t\t|")
             print("|Nama Penerima    : ", user[inisial2]['nama'],"\t\t|")
             print("|Norek. Penerima  : ", user[inisial2]['norek'],"\t\t|") 
-            print("|Jumlah		  : Rp.", nominal,"\t\t|")
-            print("|Sisa Saldo\t  : Rp ",user[inisial1]['saldo'],"\t\t\t|")
+            print("|Jumlah		  : Rp.", nominal,"\t\t\t|")
+            print("|Sisa Saldo\t  : Rp ",user[inisial1]['saldo'],"\t\t|")
             print("|\t\t\t\t\t\t|")
             print("================================================")
             print("|\t PERBARUI SEGERA DATA ANDA\t\t|")
@@ -97,14 +106,7 @@ def kembali(ulang):
         exit()
 
 while login == False:
-    print("")
-    print("================================================")
-    print("|	    --	      ATM IRS      --          |")
-    print("================================================")
-    print("")
-    print("----    Selamat Datang di IRS BANK    ----  ")
-    print("\tTransaksi Menjadi Lebih Mudah\t")
-    print("================================================")
+    splash()
      
     for i in range (3):
         username = input("Username Anda : ")
@@ -132,8 +134,9 @@ while login == False:
     ulang = "Y"
     while ulang == "Y" and login == True:
         us = user[cek_user(id_user)]
-	os.system('cls')
+        os.system('cls')
         print("")
+        splash()
         print("================================================")
         print("|       Pilih Transaksi Yang Anda Inginkan      |")
         print("================================================")
