@@ -236,10 +236,10 @@ while login == False:
                     print('1. Top Up\n2. Pembayaran')
                     t1 = int(input("Masukkan Pilihan Anda : "))
                     if t1 == 1:
-			no=input("Masukkan Nomor Hp : ")
+                        no=input("Masukkan Nomor Hp : ")
                         for i in range(1,len(nohp)+1) :
                             if no == nohp[i][0] :
-				print("Nama Akun : ", nohp[i][1])
+                                print("Nama Akun : ", nohp[i][1])
                     elif t1==2:
                         kode=input("Masukkan Kode Pembayaran : ")
                         print("Kode Pembayaran : ", kode.upper())
