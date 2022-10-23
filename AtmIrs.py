@@ -2,6 +2,7 @@ from sys import exit
 import datetime
 import time
 import random
+impoprt os
 
 user = {
          "id" : "1037", 
@@ -131,6 +132,7 @@ while login == False:
     ulang = "Y"
     while ulang == "Y" and login == True:
         us = user[cek_user(id_user)]
+	os.system('cls')
         print("")
         print("================================================")
         print("|       Pilih Transaksi Yang Anda Inginkan      |")
