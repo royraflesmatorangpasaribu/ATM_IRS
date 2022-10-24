@@ -4,7 +4,7 @@ import random #untuk random angka
 
 user = {
         "id" : "1037", 
-		"nama" : "Ikhsan Saputra",
+	"nama" : "Ikhsan Saputra",
         "pin" : "250803",
         "norek" : "2117051037",
         "saldo" : 500000
